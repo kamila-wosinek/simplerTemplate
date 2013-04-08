@@ -1,0 +1,2 @@
+simplerTemplate
+===============
