@@ -2,67 +2,71 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* line 22, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* COLORS */
+/* OTHERS  */
+/* MIXINS */
+/* line 37, ../sass/screen.scss */
 html {
-  line-height: 1;
+  color: #888888;
+  font: 13px "Arial", sans-serif;
+  line-height: 1.5;
+  text-align: justify;
 }
-
-/* line 24, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
+/* line 43, ../sass/screen.scss */
+html h1, html h2, html h3, html h4 {
+  color: #3b424b;
 }
-
-/* line 26, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* line 47, ../sass/screen.scss */
+html h4 {
+  font-size: 14px;
 }
-
-/* line 28, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
+/* line 49, ../sass/screen.scss */
+html header, html footer, html .mainSlider {
+  background-color: #3d444c;
+  color: white;
 }
-
-/* line 30, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
+/* line 52, ../sass/screen.scss */
+html header h1, html header h2, html header h3, html header h4, html footer h1, html footer h2, html footer h3, html footer h4, html .mainSlider h1, html .mainSlider h2, html .mainSlider h3, html .mainSlider h4 {
+  color: white;
 }
-/* line 103, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
+/* line 56, ../sass/screen.scss */
+html .wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
 }
-
-/* line 32, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
+/* line 61, ../sass/screen.scss */
+html header {
+  padding-bottom: 25px;
 }
-
-/* line 116, ../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+/* line 64, ../sass/screen.scss */
+html header a.logo img {
+  padding: 30px 0;
+  max-width: 100%;
+}
+/* line 69, ../sass/screen.scss */
+html header nav, html header ul {
   display: block;
+  float: right;
+}
+/* line 72, ../sass/screen.scss */
+html header ul {
+  padding-top: 60px;
+}
+/* line 74, ../sass/screen.scss */
+html header ul li {
+  display: inline-block;
+  padding: 1% 5px;
+}
+/* line 77, ../sass/screen.scss */
+html header ul li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 81, ../sass/screen.scss */
+html header ul li a:hover, html header ul li a.active {
+  color: #fee271;
+  border-bottom: 5px solid #fee271;
 }
