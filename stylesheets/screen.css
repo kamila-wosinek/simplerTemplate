@@ -1,72 +1,217 @@
-/* Welcome to Compass.
+/* Welcme to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* COLORS */
 /* OTHERS  */
+@font-face {
+  font-family: "arvobold";
+  src: url(/workspace/simpler/simplerTemplate/fonts/arvo-bold-webfont.ttf) format('truetype'), url(/workspace/simpler/simplerTemplate/fonts/arvo-bold-webfont.ttf.otf) format('opentype');
+}
+
+@font-face {
+  font-family: "arvoregular";
+  src: url(/workpace/simpler/simplerTemplate/fonts/arvo-regular-webfont.ttf) format('truetype'), url('/stylesheets/fonts/workspace/simpler/simplerTemplate/fonts/arvo-regular-webfont.ttf.otf') format('opentype');
+}
+
 /* MIXINS */
-/* line 37, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 html {
   color: #888888;
+  background-color: #efece8;
   font: 13px "Arial", sans-serif;
   line-height: 1.5;
   text-align: justify;
 }
-/* line 43, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 html h1, html h2, html h3, html h4 {
   color: #3b424b;
 }
-/* line 47, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 html h4 {
   font-size: 14px;
 }
-/* line 49, ../sass/screen.scss */
-html header, html footer, html .mainSlider {
+/* line 56, ../sass/screen.scss */
+html a {
+  color: #fee271;
+  text-decoration: none;
+}
+/* line 59, ../sass/screen.scss */
+html a:hover {
+  text-decoration: underline;
+}
+/* line 64, ../sass/screen.scss */
+html body {
+  margin: 0;
+}
+/* line 66, ../sass/screen.scss */
+html body header, html body footer, html body .mainSlider {
   background-color: #3d444c;
   color: white;
 }
-/* line 52, ../sass/screen.scss */
-html header h1, html header h2, html header h3, html header h4, html footer h1, html footer h2, html footer h3, html footer h4, html .mainSlider h1, html .mainSlider h2, html .mainSlider h3, html .mainSlider h4 {
+/* line 69, ../sass/screen.scss */
+html body header h1, html body header h2, html body header h3, html body header h4, html body footer h1, html body footer h2, html body footer h3, html body footer h4, html body .mainSlider h1, html body .mainSlider h2, html body .mainSlider h3, html body .mainSlider h4 {
   color: white;
 }
-/* line 56, ../sass/screen.scss */
-html .wrapper {
+/* line 73, ../sass/screen.scss */
+html body .wrapper {
   max-width: 980px;
+  padding: 0 10px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 61, ../sass/screen.scss */
-html header {
+/* line 79, ../sass/screen.scss */
+html body header {
   padding-bottom: 25px;
 }
-/* line 64, ../sass/screen.scss */
-html header a.logo img {
+/* line 82, ../sass/screen.scss */
+html body header a.logo img {
   padding: 30px 0;
   max-width: 100%;
 }
-/* line 69, ../sass/screen.scss */
-html header nav, html header ul {
+/* line 87, ../sass/screen.scss */
+html body header nav, html body header ul {
   display: block;
   float: right;
 }
-/* line 72, ../sass/screen.scss */
-html header ul {
-  padding-top: 60px;
+@media screen and (max-width: 621px) {
+  /* line 87, ../sass/screen.scss */
+  html body header nav, html body header ul {
+    display: block;
+    float: left;
+    width: 100%;
+  }
 }
-/* line 74, ../sass/screen.scss */
-html header ul li {
+/* line 93, ../sass/screen.scss */
+html body header ul {
+  padding: 60px 0 0 0;
+  margin: 0;
+}
+@media screen and (max-width: 621px) {
+  /* line 93, ../sass/screen.scss */
+  html body header ul {
+    padding-top: 0;
+    text-align: center;
+  }
+}
+/* line 100, ../sass/screen.scss */
+html body header ul li {
   display: inline-block;
   padding: 1% 5px;
 }
-/* line 77, ../sass/screen.scss */
-html header ul li a {
+/* line 103, ../sass/screen.scss */
+html body header ul li a {
   color: white;
-  text-decoration: none;
   text-transform: uppercase;
+  text-decoration: none;
+  font-family: "arvobold";
+  padding-bottom: 2px;
 }
-/* line 81, ../sass/screen.scss */
-html header ul li a:hover, html header ul li a.active {
+/* line 109, ../sass/screen.scss */
+html body header ul li a:hover, html body header ul li a.active {
   color: #fee271;
   border-bottom: 5px solid #fee271;
+  text-decoration: none;
+}
+/* line 118, ../sass/screen.scss */
+html body .content {
+  border-top: 10px solid #bfbdba;
+  border-bottom: 10px solid #bfbdba;
+}
+/* line 123, ../sass/screen.scss */
+html body footer {
+  padding-bottom: 5%;
+}
+/* line 125, ../sass/screen.scss */
+html body footer .wrapper {
+  padding: 10px;
+}
+/* line 127, ../sass/screen.scss */
+html body footer .wrapper .mainFtrCont {
+  width: 100%;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 130, ../sass/screen.scss */
+html body footer .wrapper .mainFtrCont .footerBox {
+  display: block;
+  float: left;
+  width: 220px;
+  padding: 0 10px;
+}
+@media screen and (max-width: 770px) {
+  /* line 130, ../sass/screen.scss */
+  html body footer .wrapper .mainFtrCont .footerBox {
+    display: none;
+  }
+}
+/* line 135, ../sass/screen.scss */
+html body footer .wrapper .mainFtrCont .footerBox p, html body footer .wrapper .mainFtrCont .footerBox table span, html body footer .wrapper .mainFtrCont .footerBox li {
+  font-size: 10.998px;
+  color: #888888;
+  text-align: left;
+}
+/* line 140, ../sass/screen.scss */
+html body footer .wrapper .mainFtrCont .footerBox table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+/* line 143, ../sass/screen.scss */
+html body footer .wrapper .mainFtrCont .footerBox table td {
+  vertical-align: top;
+}
+/* line 146, ../sass/screen.scss */
+html body footer .wrapper .mainFtrCont .footerBox ul {
+  padding-left: 25px;
+}
+/* line 148, ../sass/screen.scss */
+html body footer .wrapper .mainFtrCont .footerBox ul li {
+  list-style-image: url("/workspace/simpler/simplerTemplate/images/smallTwitter.png");
+  padding-bottom: 20px;
+}
+/* line 151, ../sass/screen.scss */
+html body footer .wrapper .mainFtrCont .footerBox ul li strong {
+  font-weight: none;
+  color: white;
+}
+/* line 157, ../sass/screen.scss */
+html body footer .wrapper .mainFtrCont .footerBox a.withImg {
+  display: block;
+  float: left;
+  padding: 0 7px 5px 0;
+}
+/* line 160, ../sass/screen.scss */
+html body footer .wrapper .mainFtrCont .footerBox a.withImg img {
+  width: 60px;
+  height: 60px;
+  border: 3px solid white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.56) 0px 0px 9px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.56) 0px 0px 9px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 0px 9px;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+}
+/* line 171, ../sass/screen.scss */
+html body footer .wrapper .ftrInfo {
+  padding-top: 5%;
+}
+/* line 173, ../sass/screen.scss */
+html body footer .wrapper .ftrInfo span {
+  padding: 0 10px;
+}
+/* line 176, ../sass/screen.scss */
+html body footer .wrapper .ftrInfo .FtrSocial {
+  display: block;
+  float: right;
+}
+/* line 178, ../sass/screen.scss */
+html body footer .wrapper .ftrInfo .FtrSocial img {
+  padding: 0 10px;
+}
+@media screen and (max-width: 416px) {
+  /* line 178, ../sass/screen.scss */
+  html body footer .wrapper .ftrInfo .FtrSocial img {
+    padding: 10px;
+  }
 }

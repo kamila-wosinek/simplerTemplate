@@ -1,4 +1,4 @@
-/* Welcome to Compass.
+/* Welcme to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
@@ -13,11 +13,17 @@ $textCl: #888888;
 $HeadersCl: #3b424b;
 $HeaderTextCl: #ffffff;
 $HoverTextCl: #fee271;
+$MainPageBgCl: #efece8;
+$FtrTextCl: #888888;
+$smallImgBorderCl: #ffffff;
 
 /* OTHERS  */
 $mainPadding: 10px;
 $mainFont: 13px;
 $default-has-layout-approach: zoom !default;
+
+@include font-face("arvobold", font-files("/workspace/simpler/simplerTemplate/fonts/arvo-bold-webfont.ttf", "/workspace/simpler/simplerTemplate/fonts/arvo-bold-webfont.ttf.otf"));
+@include font-face("arvoregular", font-files("/workpace/simpler/simplerTemplate/fonts/arvo-regular-webfont.ttf", "workspace/simpler/simplerTemplate/fonts/arvo-regular-webfont.ttf.otf"));
 
 /* MIXINS */
 @mixin left {
@@ -36,6 +42,7 @@ $default-has-layout-approach: zoom !default;
 
 html{
     color: $textCl;
+    background-color: $MainPageBgCl;
     font: $mainFont 'Arial', sans-serif;
     line-height: 1.5;
     text-align: justify;
@@ -46,6 +53,16 @@ html{
     h3{}
     h4{ font-size: 14px;  }
 
+    a{
+        color: $HoverTextCl;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    body{
+    margin:0;
     header, footer, .mainSlider{
         background-color: $mainDarkBgCl;
         color: $HeaderTextCl;
@@ -55,6 +72,7 @@ html{
     }
     .wrapper{
         max-width: 980px;
+        padding: 0 $mainPadding;
         margin: 0 auto;
         @include clearfix;
     }
@@ -68,23 +86,103 @@ html{
         }
         nav, ul{
           @include right; 
+          @media screen and (max-width: 621px){ 
+            @include left;
+            width: 100%;}
         }
         ul{
-          padding-top: 6 * $mainPadding;
+          padding: (6 * $mainPadding) 0 0 0;
+          margin: 0;
+          @media screen and (max-width: 621px){ 
+            padding-top: 0;
+            text-align: center;}
+         
           li{
             display: inline-block;
             padding: 1% (.5 * $mainPadding);
             a{
                 color: $HeaderTextCl;
-                text-decoration: none;
                 text-transform: uppercase;
+                text-decoration: none;
+                font-family: "arvobold";
+                padding-bottom: $mainPadding / 5;
                 &:hover, &.active{
                     color: $HoverTextCl;
                     border-bottom: 5px solid $HoverTextCl;
+                    text-decoration: none;
                 }
             }
           }
         }
+    }
+    .content{
+        border-top: 10px solid $mainBorderBgCl;
+        border-bottom: 10px solid $mainBorderBgCl;
+    }
+
+    footer{
+        padding-bottom: 5%;
+        .wrapper{
+            padding: $mainPadding;
+            .mainFtrCont{
+                width: 100%;
+                @include clearfix;
+                .footerBox{
+                    @media screen and (max-width: 770px){ display: none;}
+                    @include left;
+                    width: 220px;
+                    padding: 0 $mainPadding;
+                    p, table span, li{
+                        font-size: $mainFont * .846;
+                        color: $FtrTextCl;
+                        text-align: left;
+                    }
+                    table{ 
+                        border-spacing:0;
+                        border-collapse:collapse;
+                        td{
+                            vertical-align: top;}
+                    }
+                    ul{
+                        padding-left: 2.5 * $mainPadding;
+                        li{
+                            list-style-image:url('/workspace/simpler/simplerTemplate/images/smallTwitter.png');
+                            padding-bottom: 2 * $mainPadding;
+                            strong{
+                                font-weight: none;
+                                color: $HeaderTextCl;
+                            }
+                        }
+                    }
+                    a.withImg{
+                        @include left;
+                        padding: 0 7px 5px 0;
+                        img{
+                            width: 60px;
+                            height: 60px;
+                            border: 3px solid $smallImgBorderCl;
+                            @include box-shadow( rgba(0, 0, 0, 0.56) 0px 0px 9px);
+                            filter: grayscale(1);
+                            -webkit-filter: grayscale(1);
+                        }
+                    }
+                }
+            }
+            .ftrInfo{
+                padding-top: 5%;
+                span{
+                    padding: 0 $mainPadding;
+                }
+                .FtrSocial{
+                    @include right;
+                    img{
+                        padding: 0 $mainPadding;
+                        @media screen and (max-width: 416px){ padding: $mainPadding; }
+                    }
+                }
+            }
+        }
+    }
     }
 
 }
