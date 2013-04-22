@@ -14,6 +14,7 @@ $HeadersCl: #3b424b;
 $HeaderTextCl: #ffffff;
 $HoverTextCl: #fee271;
 $MainPageBgCl: #efece8;
+$MainClUnderContent: #f1f1f1;
 $FtrTextCl: #888888;
 $smallImgBorderCl: #ffffff;
 
@@ -47,11 +48,12 @@ html{
     line-height: 1.5;
     text-align: justify;
 
-    h1,h2,h3,h4 { color: $HeadersCl; }
-    h1{}
+    h1,h2,h3,h4 { color: $HeadersCl; font-family: 'arvobold'; text-transform: uppercase;}
+    h1{ font-size: 48px; text-align: center;}
     h2{}
     h3{}
-    h4{ font-size: 14px;  }
+    h4{}
+    h5{ font-size: 14px;  }
 
     a{
         color: $HoverTextCl;
@@ -115,9 +117,24 @@ html{
           }
         }
     }
+    .mainSlider{
+        padding-bottom: 5 * $mainPadding;
+    }
     .content{
         border-top: 10px solid $mainBorderBgCl;
         border-bottom: 10px solid $mainBorderBgCl;
+        .wrapper{
+            overflow: visible;
+            .mainBg{        
+                margin: -30px 0;
+                padding: 30px 0;
+                background-color: $MainClUnderContent;
+                position: relative;
+                background-image: url('/workspace/simpler/simplerTemplate/images/PatternTop.png'), url('/workspace/simpler/simplerTemplate/images/PatternBottom.png');
+                background-position: 2px top, center bottom;
+                background-repeat: no-repeat;
+            }
+        }
     }
 
     footer{
@@ -126,11 +143,13 @@ html{
             padding: $mainPadding;
             .mainFtrCont{
                 width: 100%;
+                padding-top: 3 * $mainPadding;
                 @include clearfix;
                 .footerBox{
                     @media screen and (max-width: 770px){ display: none;}
                     @include left;
                     width: 220px;
+                    min-height: 220px;
                     padding: 0 $mainPadding;
                     p, table span, li{
                         font-size: $mainFont * .846;
@@ -149,7 +168,7 @@ html{
                             list-style-image:url('/workspace/simpler/simplerTemplate/images/smallTwitter.png');
                             padding-bottom: 2 * $mainPadding;
                             strong{
-                                font-weight: none;
+                                font-weight: normal;
                                 color: $HeaderTextCl;
                             }
                         }
