@@ -6,12 +6,12 @@
 /* OTHERS  */
 @font-face {
   font-family: "arvobold";
-  src: url(/workspace/simpler/simplerTemplate/fonts/arvo-bold-webfont.ttf) format('truetype'), url(/workspace/simpler/simplerTemplate/fonts/arvo-bold-webfont.ttf.otf) format('opentype');
+  src: url('/stylesheets/fonts/../fonts/arvo-bold-webfont.ttf') format('truetype'), url('/stylesheets/fonts/../fonts/arvo-bold-webfont.ttf.otf') format('opentype');
 }
 
 @font-face {
   font-family: "arvoregular";
-  src: url(/workpace/simpler/simplerTemplate/fonts/arvo-regular-webfont.ttf) format('truetype'), url('/stylesheets/fonts/workspace/simpler/simplerTemplate/fonts/arvo-regular-webfont.ttf.otf') format('opentype');
+  src: url('/stylesheets/fonts/../fonts/arvo-regular-webfont.ttf') format('truetype'), url('/stylesheets/fonts/../fonts/arvo-regular-webfont.ttf.otf') format('opentype');
 }
 
 /* MIXINS */
@@ -160,7 +160,7 @@ html body .content .wrapper .mainBg {
   padding: 30px 0;
   background-color: #f1f1f1;
   position: relative;
-  background-image: url("/workspace/simpler/simplerTemplate/images/PatternTop.png"), url("/workspace/simpler/simplerTemplate/images/PatternBottom.png");
+  background-image: url("../images/PatternTop.png"), url("../images/PatternBottom.png");
   background-position: 2px top, center bottom;
   background-repeat: no-repeat;
 }
@@ -257,7 +257,7 @@ html body .content .wrapper .mainBg section.BlogAndTesti .blog p {
 }
 /* line 197, ../sass/screen.scss */
 html body .content .wrapper .mainBg section.BlogAndTesti .blog table td.date {
-  background: url("/workspace/simpler/simplerTemplate/images/underDate.png") no-repeat left 20px transparent;
+  background: url("../images/underDate.png") no-repeat left 20px transparent;
   width: 72px;
   height: 90px;
   padding-right: 10px;
@@ -353,7 +353,7 @@ html body footer .wrapper .mainFtrCont .footerBox ul {
 }
 /* line 258, ../sass/screen.scss */
 html body footer .wrapper .mainFtrCont .footerBox ul li {
-  list-style-image: url("/workspace/simpler/simplerTemplate/images/smallTwitter.png");
+  list-style-image: url("../images/smallTwitter.png");
   padding-bottom: 20px;
 }
 /* line 261, ../sass/screen.scss */

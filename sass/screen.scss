@@ -24,8 +24,8 @@ $mainPadding: 10px;
 $mainFont: 13px;
 $default-has-layout-approach: zoom !default;
 
-@include font-face("arvobold", font-files("/workspace/simpler/simplerTemplate/fonts/arvo-bold-webfont.ttf", "/workspace/simpler/simplerTemplate/fonts/arvo-bold-webfont.ttf.otf"));
-@include font-face("arvoregular", font-files("/workpace/simpler/simplerTemplate/fonts/arvo-regular-webfont.ttf", "workspace/simpler/simplerTemplate/fonts/arvo-regular-webfont.ttf.otf"));
+@include font-face("arvobold", font-files("../fonts/arvo-bold-webfont.ttf", "../fonts/arvo-bold-webfont.ttf.otf"));
+@include font-face("arvoregular", font-files("../fonts/arvo-regular-webfont.ttf", "../fonts/arvo-regular-webfont.ttf.otf"));
 
 /* MIXINS */
 @mixin left {
@@ -142,7 +142,7 @@ html{
                 padding: 30px 0;
                 background-color: $MainClUnderContent;
                 position: relative;
-                background-image: url('/workspace/simpler/simplerTemplate/images/PatternTop.png'), url('/workspace/simpler/simplerTemplate/images/PatternBottom.png');
+                background-image: url('../images/PatternTop.png'), url('../images/PatternBottom.png');
                 background-position: 2px top, center bottom;
                 background-repeat: no-repeat;
                 
@@ -195,7 +195,7 @@ html{
                         p{margin-top: 0;}
                         table{
                             td.date{
-                                background: url("/workspace/simpler/simplerTemplate/images/underDate.png") no-repeat left 20px transparent;
+                                background: url("../images/underDate.png") no-repeat left 20px transparent;
                                 width: 72px;
                                 height: 90px;
                                 padding-right: $mainPadding;
@@ -256,7 +256,7 @@ html{
                     ul{
                         padding-left: 2.5 * $mainPadding;
                         li{
-                            list-style-image:url('/workspace/simpler/simplerTemplate/images/smallTwitter.png');
+                            list-style-image:url('../images/smallTwitter.png');
                             padding-bottom: 2 * $mainPadding;
                             strong{
                                 font-weight: normal;
