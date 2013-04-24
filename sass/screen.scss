@@ -16,7 +16,8 @@ $HoverTextCl: #fee271;
 $MainPageBgCl: #efece8;
 $MainClUnderContent: #f1f1f1;
 $FtrTextCl: #888888;
-$smallImgBorderCl: #ffffff;
+$ImgBorderCl: #ffffff;
+$ButtonCl: #3b424b;
 
 /* OTHERS  */
 $mainPadding: 10px;
@@ -39,6 +40,10 @@ $default-has-layout-approach: zoom !default;
   overflow: hidden;
   @include has-layout;
 }
+@mixin grayscale {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+}
 
 
 html{
@@ -49,11 +54,17 @@ html{
     text-align: justify;
 
     h1,h2,h3,h4 { color: $HeadersCl; font-family: 'arvobold'; text-transform: uppercase;}
-    h1{ font-size: 48px; text-align: center;}
+    h1{ 
+        font-size: 3.5em; 
+        text-align: center;
+        margin: (2 * $mainPadding) 0;
+        @media screen and (min-width: 621px) and (max-width: 770px){font-size: 2.8em;}
+        @media screen and (min-width: 321px) and (max-width: 620px){font-size: 2.5em;}
+        @media screen and (max-width: 320px){font-size:2.1em;}}
     h2{}
     h3{}
     h4{}
-    h5{ font-size: 14px;  }
+    h5{ font-size: 1.1em;  }
 
     a{
         color: $HoverTextCl;
@@ -119,6 +130,7 @@ html{
     }
     .mainSlider{
         padding-bottom: 5 * $mainPadding;
+        display:none;
     }
     .content{
         border-top: 10px solid $mainBorderBgCl;
@@ -133,6 +145,83 @@ html{
                 background-image: url('/workspace/simpler/simplerTemplate/images/PatternTop.png'), url('/workspace/simpler/simplerTemplate/images/PatternBottom.png');
                 background-position: 2px top, center bottom;
                 background-repeat: no-repeat;
+                
+                article.featuredWork{
+                    padding: 0 1.5%;
+                    width: 97%;
+                    @include clearfix;
+                    figure{
+                        width: 30%;
+                        padding: 1.6%;
+                        margin: 0;
+                        @media screen and (min-width: 451px) and (max-width: 620px){width: 46%;}
+                        @media screen and (max-width: 450px){width: 98%;}
+                        @include left;
+                        img{
+                            max-width: 280px;
+                            width: 92%;
+                            @include grayscale;
+                            border: 10px solid $ImgBorderCl;
+                            @media screen and (max-width: 300px){ border: 5px solid $ImgBorderCl;}
+                            @include box-shadow (2px 0 5px rgba(0, 0, 0, 0.29));
+                        }
+                    }
+                    input.submit{
+                        background-color: $ButtonCl;
+                        border: none;
+                        @include right;
+                        padding: $mainPadding;
+                        color: $HoverTextCl;
+                        font-weight: bold;
+                        font-family: "arvobold";
+                        &:hover{
+                            color: $ButtonCl;
+                            background-color: $HoverTextCl;
+                        }
+                    }                    
+                }
+                
+                section.BlogAndTesti{
+                    padding: 0 1.5%;
+                    width: 97%;
+                    overflow: visible;
+                    @media screen and (max-width: 620px){display: none;}
+                    .blog{
+                        width: 50%;
+                        margin-left: -32px;
+                        @include left;
+                        h2{margin-left: 42px;}
+                        h3{margin-bottom: 10px;}
+                        p{margin-top: 0;}
+                        table{
+                            td.date{
+                                background: url("/workspace/simpler/simplerTemplate/images/underDate.png") no-repeat left 20px transparent;
+                                width: 72px;
+                                height: 90px;
+                                padding-right: $mainPadding;
+                                vertical-align: top;
+                                @include clearfix;
+                                padding-top: 20px;
+                                text-align: center;
+                                span{
+                                    color: $HoverTextCl;
+                                    font-family: 'arvobold';
+                                    width: 100%;
+                                    @include left;
+                                    &.day{font-size: 21px;}
+                                    &.month{font-size: 14px;}
+                                    &.year{font-size: 12px;}
+                                    
+                                }
+                            }
+                        }
+                    }
+                    aside.testimonials{
+                        width: 45%;
+                        @include right;
+                        p{font-style: italic;}
+                    }
+                }
             }
         }
     }
@@ -151,6 +240,8 @@ html{
                     width: 220px;
                     min-height: 220px;
                     padding: 0 $mainPadding;
+                    &.last{
+                        @media screen and (max-width: 995px){ display: none;}}
                     p, table span, li{
                         font-size: $mainFont * .846;
                         color: $FtrTextCl;
@@ -179,10 +270,9 @@ html{
                         img{
                             width: 60px;
                             height: 60px;
-                            border: 3px solid $smallImgBorderCl;
+                            border: 3px solid $ImgBorderCl;
                             @include box-shadow( rgba(0, 0, 0, 0.56) 0px 0px 9px);
-                            filter: grayscale(1);
-                            -webkit-filter: grayscale(1);
+                            @include grayscale;
                         }
                     }
                 }
