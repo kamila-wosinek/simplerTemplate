@@ -78,6 +78,7 @@ html{
     margin:0;
     header, footer, .mainSlider{
         background-color: $mainDarkBgCl;
+        background: url("../images/Bg.png") repeat $mainDarkBgCl;
         color: $HeaderTextCl;
            h1,h2,h3,h4{
                color: $HeaderTextCl;
@@ -130,7 +131,12 @@ html{
     }
     .mainSlider{
         padding-bottom: 5 * $mainPadding;
-        display:none;
+        @media screen and (max-width: 740px){display: none;}
+        img{
+            border: 10px solid rgba(0,0,0,0.2);
+            max-width: 720px;
+            @include left;
+        }
     }
     .content{
         border-top: 10px solid $mainBorderBgCl;
@@ -187,7 +193,7 @@ html{
                     overflow: visible;
                     @media screen and (max-width: 620px){display: none;}
                     .blog{
-                        width: 50%;
+                        width: 49%;
                         margin-left: -32px;
                         @include left;
                         h2{margin-left: 42px;}
@@ -217,9 +223,26 @@ html{
                         }
                     }
                     aside.testimonials{
-                        width: 45%;
+                        width: 49%;
                         @include right;
-                        p{font-style: italic;}
+                        .testimTop{
+                            background: url("../images/testimonialsBgTop.png") no-repeat top left transparent;
+                            background-size:100% 100%;
+                            max-width: 464px;
+                            height: 11px;
+                        }
+                        .testimBtm{
+                            p{font-style: italic;}
+                            background: url("../images/testimonialsBgBottom.png") no-repeat bottom left transparent;
+                            background-size: 100%; 
+                            padding: 9px 20px 40px;
+                            max-width: 424px;
+                        }
+                        span{
+                            padding-left: 75px;
+                            margin-top: -15px;
+                            display: block;
+                        }
                     }
                 }
             }

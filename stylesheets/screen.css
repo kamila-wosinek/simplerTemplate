@@ -73,13 +73,14 @@ html body {
 /* line 79, ../sass/screen.scss */
 html body header, html body footer, html body .mainSlider {
   background-color: #3d444c;
+  background: url("../images/Bg.png") repeat #3d444c;
   color: white;
 }
-/* line 82, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 html body header h1, html body header h2, html body header h3, html body header h4, html body footer h1, html body footer h2, html body footer h3, html body footer h4, html body .mainSlider h1, html body .mainSlider h2, html body .mainSlider h3, html body .mainSlider h4 {
   color: white;
 }
-/* line 86, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 html body .wrapper {
   max-width: 980px;
   padding: 0 10px;
@@ -87,46 +88,46 @@ html body .wrapper {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 92, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 html body header {
   padding-bottom: 25px;
 }
-/* line 95, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 html body header a.logo img {
   padding: 30px 0;
   max-width: 100%;
 }
-/* line 100, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 html body header nav, html body header ul {
   display: block;
   float: right;
 }
 @media screen and (max-width: 621px) {
-  /* line 100, ../sass/screen.scss */
+  /* line 101, ../sass/screen.scss */
   html body header nav, html body header ul {
     display: block;
     float: left;
     width: 100%;
   }
 }
-/* line 106, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 html body header ul {
   padding: 60px 0 0 0;
   margin: 0;
 }
 @media screen and (max-width: 621px) {
-  /* line 106, ../sass/screen.scss */
+  /* line 107, ../sass/screen.scss */
   html body header ul {
     padding-top: 0;
     text-align: center;
   }
 }
-/* line 113, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 html body header ul li {
   display: inline-block;
   padding: 1% 5px;
 }
-/* line 116, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 html body header ul li a {
   color: white;
   text-transform: uppercase;
@@ -134,27 +135,39 @@ html body header ul li a {
   font-family: "arvobold";
   padding-bottom: 2px;
 }
-/* line 122, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 html body header ul li a:hover, html body header ul li a.active {
   color: #fee271;
   border-bottom: 5px solid #fee271;
   text-decoration: none;
 }
-/* line 131, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 html body .mainSlider {
   padding-bottom: 50px;
-  display: none;
+}
+@media screen and (max-width: 740px) {
+  /* line 132, ../sass/screen.scss */
+  html body .mainSlider {
+    display: none;
+  }
 }
 /* line 135, ../sass/screen.scss */
+html body .mainSlider img {
+  border: 10px solid rgba(0, 0, 0, 0.2);
+  max-width: 720px;
+  display: block;
+  float: left;
+}
+/* line 141, ../sass/screen.scss */
 html body .content {
   border-top: 10px solid #bfbdba;
   border-bottom: 10px solid #bfbdba;
 }
-/* line 138, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 html body .content .wrapper {
   overflow: visible;
 }
-/* line 140, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 html body .content .wrapper .mainBg {
   margin: -30px 0;
   padding: 30px 0;
@@ -164,14 +177,14 @@ html body .content .wrapper .mainBg {
   background-position: 2px top, center bottom;
   background-repeat: no-repeat;
 }
-/* line 149, ../sass/screen.scss */
+/* line 155, ../sass/screen.scss */
 html body .content .wrapper .mainBg article.featuredWork {
   padding: 0 1.5%;
   width: 97%;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 153, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 html body .content .wrapper .mainBg article.featuredWork figure {
   width: 30%;
   padding: 1.6%;
@@ -180,18 +193,18 @@ html body .content .wrapper .mainBg article.featuredWork figure {
   float: left;
 }
 @media screen and (min-width: 451px) and (max-width: 620px) {
-  /* line 153, ../sass/screen.scss */
+  /* line 159, ../sass/screen.scss */
   html body .content .wrapper .mainBg article.featuredWork figure {
     width: 46%;
   }
 }
 @media screen and (max-width: 450px) {
-  /* line 153, ../sass/screen.scss */
+  /* line 159, ../sass/screen.scss */
   html body .content .wrapper .mainBg article.featuredWork figure {
     width: 98%;
   }
 }
-/* line 160, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 html body .content .wrapper .mainBg article.featuredWork figure img {
   max-width: 280px;
   width: 92%;
@@ -203,12 +216,12 @@ html body .content .wrapper .mainBg article.featuredWork figure img {
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.29);
 }
 @media screen and (max-width: 300px) {
-  /* line 160, ../sass/screen.scss */
+  /* line 166, ../sass/screen.scss */
   html body .content .wrapper .mainBg article.featuredWork figure img {
     border: 5px solid white;
   }
 }
-/* line 169, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 html body .content .wrapper .mainBg article.featuredWork input.submit {
   background-color: #3b424b;
   border: none;
@@ -219,43 +232,43 @@ html body .content .wrapper .mainBg article.featuredWork input.submit {
   font-weight: bold;
   font-family: "arvobold";
 }
-/* line 177, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 html body .content .wrapper .mainBg article.featuredWork input.submit:hover {
   color: #3b424b;
   background-color: #fee271;
 }
-/* line 184, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 html body .content .wrapper .mainBg section.BlogAndTesti {
   padding: 0 1.5%;
   width: 97%;
   overflow: visible;
 }
 @media screen and (max-width: 620px) {
-  /* line 184, ../sass/screen.scss */
+  /* line 190, ../sass/screen.scss */
   html body .content .wrapper .mainBg section.BlogAndTesti {
     display: none;
   }
 }
-/* line 189, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 html body .content .wrapper .mainBg section.BlogAndTesti .blog {
-  width: 50%;
+  width: 49%;
   margin-left: -32px;
   display: block;
   float: left;
 }
-/* line 193, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 html body .content .wrapper .mainBg section.BlogAndTesti .blog h2 {
   margin-left: 42px;
 }
-/* line 194, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 html body .content .wrapper .mainBg section.BlogAndTesti .blog h3 {
   margin-bottom: 10px;
 }
-/* line 195, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 html body .content .wrapper .mainBg section.BlogAndTesti .blog p {
   margin-top: 0;
 }
-/* line 197, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 html body .content .wrapper .mainBg section.BlogAndTesti .blog table td.date {
   background: url("../images/underDate.png") no-repeat left 20px transparent;
   width: 72px;
@@ -267,7 +280,7 @@ html body .content .wrapper .mainBg section.BlogAndTesti .blog table td.date {
   padding-top: 20px;
   text-align: center;
 }
-/* line 206, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 html body .content .wrapper .mainBg section.BlogAndTesti .blog table td.date span {
   color: #fee271;
   font-family: 'arvobold';
@@ -275,44 +288,64 @@ html body .content .wrapper .mainBg section.BlogAndTesti .blog table td.date spa
   display: block;
   float: left;
 }
-/* line 211, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 html body .content .wrapper .mainBg section.BlogAndTesti .blog table td.date span.day {
   font-size: 21px;
 }
-/* line 212, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 html body .content .wrapper .mainBg section.BlogAndTesti .blog table td.date span.month {
   font-size: 14px;
 }
-/* line 213, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 html body .content .wrapper .mainBg section.BlogAndTesti .blog table td.date span.year {
   font-size: 12px;
 }
-/* line 219, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 html body .content .wrapper .mainBg section.BlogAndTesti aside.testimonials {
-  width: 45%;
+  width: 49%;
   display: block;
   float: right;
 }
-/* line 222, ../sass/screen.scss */
-html body .content .wrapper .mainBg section.BlogAndTesti aside.testimonials p {
+/* line 228, ../sass/screen.scss */
+html body .content .wrapper .mainBg section.BlogAndTesti aside.testimonials .testimTop {
+  background: url("../images/testimonialsBgTop.png") no-repeat top left transparent;
+  background-size: 100% 100%;
+  max-width: 464px;
+  height: 11px;
+}
+/* line 234, ../sass/screen.scss */
+html body .content .wrapper .mainBg section.BlogAndTesti aside.testimonials .testimBtm {
+  background: url("../images/testimonialsBgBottom.png") no-repeat bottom left transparent;
+  background-size: 100%;
+  padding: 9px 20px 40px;
+  max-width: 424px;
+}
+/* line 235, ../sass/screen.scss */
+html body .content .wrapper .mainBg section.BlogAndTesti aside.testimonials .testimBtm p {
   font-style: italic;
 }
-/* line 229, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
+html body .content .wrapper .mainBg section.BlogAndTesti aside.testimonials span {
+  padding-left: 75px;
+  margin-top: -15px;
+  display: block;
+}
+/* line 252, ../sass/screen.scss */
 html body footer {
   padding-bottom: 5%;
 }
-/* line 231, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 html body footer .wrapper {
   padding: 10px;
 }
-/* line 233, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 html body footer .wrapper .mainFtrCont {
   width: 100%;
   padding-top: 30px;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 237, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 html body footer .wrapper .mainFtrCont .footerBox {
   display: block;
   float: left;
@@ -321,53 +354,53 @@ html body footer .wrapper .mainFtrCont .footerBox {
   padding: 0 10px;
 }
 @media screen and (max-width: 770px) {
-  /* line 237, ../sass/screen.scss */
+  /* line 260, ../sass/screen.scss */
   html body footer .wrapper .mainFtrCont .footerBox {
     display: none;
   }
 }
 @media screen and (max-width: 995px) {
-  /* line 243, ../sass/screen.scss */
+  /* line 266, ../sass/screen.scss */
   html body footer .wrapper .mainFtrCont .footerBox.last {
     display: none;
   }
 }
-/* line 245, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 html body footer .wrapper .mainFtrCont .footerBox p, html body footer .wrapper .mainFtrCont .footerBox table span, html body footer .wrapper .mainFtrCont .footerBox li {
   font-size: 10.998px;
   color: #888888;
   text-align: left;
 }
-/* line 250, ../sass/screen.scss */
+/* line 273, ../sass/screen.scss */
 html body footer .wrapper .mainFtrCont .footerBox table {
   border-spacing: 0;
   border-collapse: collapse;
 }
-/* line 253, ../sass/screen.scss */
+/* line 276, ../sass/screen.scss */
 html body footer .wrapper .mainFtrCont .footerBox table td {
   vertical-align: top;
 }
-/* line 256, ../sass/screen.scss */
+/* line 279, ../sass/screen.scss */
 html body footer .wrapper .mainFtrCont .footerBox ul {
   padding-left: 25px;
 }
-/* line 258, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 html body footer .wrapper .mainFtrCont .footerBox ul li {
   list-style-image: url("../images/smallTwitter.png");
   padding-bottom: 20px;
 }
-/* line 261, ../sass/screen.scss */
+/* line 284, ../sass/screen.scss */
 html body footer .wrapper .mainFtrCont .footerBox ul li strong {
   font-weight: normal;
   color: white;
 }
-/* line 267, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 html body footer .wrapper .mainFtrCont .footerBox a.withImg {
   display: block;
   float: left;
   padding: 0 7px 5px 0;
 }
-/* line 270, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 html body footer .wrapper .mainFtrCont .footerBox a.withImg img {
   width: 60px;
   height: 60px;
@@ -378,25 +411,25 @@ html body footer .wrapper .mainFtrCont .footerBox a.withImg img {
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
 }
-/* line 280, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 html body footer .wrapper .ftrInfo {
   padding-top: 5%;
 }
-/* line 282, ../sass/screen.scss */
+/* line 305, ../sass/screen.scss */
 html body footer .wrapper .ftrInfo span {
   padding: 0 10px;
 }
-/* line 285, ../sass/screen.scss */
+/* line 308, ../sass/screen.scss */
 html body footer .wrapper .ftrInfo .FtrSocial {
   display: block;
   float: right;
 }
-/* line 287, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 html body footer .wrapper .ftrInfo .FtrSocial img {
   padding: 0 10px;
 }
 @media screen and (max-width: 416px) {
-  /* line 287, ../sass/screen.scss */
+  /* line 310, ../sass/screen.scss */
   html body footer .wrapper .ftrInfo .FtrSocial img {
     padding: 10px;
   }
