@@ -73,6 +73,8 @@ html{
             text-decoration: underline;
         }
     }
+    
+
 
     body{
     margin:0;
@@ -136,7 +138,12 @@ html{
             border: 10px solid rgba(0,0,0,0.2);
             max-width: 720px;
             @include left;
+            @include grayscale;
         }
+        td.infoBox{
+            padding-left: 10px;
+        }
+        
     }
     .content{
         border-top: 10px solid $mainBorderBgCl;
