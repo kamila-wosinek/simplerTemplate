@@ -123,9 +123,14 @@ html{
                 font-family: "arvobold";
                 padding-bottom: $mainPadding / 5;
                 &:hover, &.active{
-                    color: $HoverTextCl;
                     border-bottom: 5px solid $HoverTextCl;
                     text-decoration: none;
+                }
+                &:hover{
+                    color: $HoverTextCl;
+                    -webkit-transition-duration: .1s;
+                    -webkit-transition-timing-function: ease-in;
+                    transition-duration: .1s;
                 }
             }
           }
@@ -142,6 +147,8 @@ html{
         }
         td.infoBox{
             padding-left: 10px;
+            vertical-align: top;
+            h2{margin-top: 0; text-align: left;}
         }
         
     }
@@ -187,6 +194,9 @@ html{
                         color: $HoverTextCl;
                         font-weight: bold;
                         font-family: "arvobold";
+                        -webkit-transition-duration: .3s;
+                        -webkit-transition-timing-function: ease-out;
+                        transition-duration: .3s;
                         &:hover{
                             color: $ButtonCl;
                             background-color: $HoverTextCl;
